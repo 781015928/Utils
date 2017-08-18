@@ -15,8 +15,9 @@ buildscript {
 }
 ```
 ##### apply plugin
-
-
+```
+apply plugin: 'android-aspectjx'
+```
 
 
 ### debug
