@@ -31,6 +31,6 @@ releaseCompile  'com.czg.utils:UtilsRelease:1.0.0'
  ```
  
  
-##LifeCycleLog 自动生成生命周期i级别 log
+## LifeCycleLog 自动生成生命周期i级别 log
 ![Image text](https://github.com/781015928/Utils/blob/master/snapshot/SNAPSHOT_3.png)
  
