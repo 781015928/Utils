@@ -1,79 +1,41 @@
 package com.czg.utils;
 
-import android.text.TextUtils;
-import android.util.Log;
-
-import static com.czg.utils.LogUtils.DOUBLE_DIVIDER;
-
 /**
  * Created by 78101 on 2017/5/9.
  */
 
-public enum LogManager {
+ enum LogManager {
     LOGGER;
 
     private LogManager() {
     }
 
     public void w(String tag, String info) {
-        Log.println(Log.WARN, tag, info);
     }
 
     public void d(String tag, String info) {
-        if(info!=null&&info.length()>3000) {
-            Log.println(Log.DEBUG, tag, info.substring(0, 3000));
-            d(tag,info.substring(3000,info.length()));
-        }else {
-            Log.println(Log.DEBUG, tag, info);
-        }
 
     }
 
     public void e(String tag, String info) {
-        Log.println(Log.ERROR, tag, info);
     }
 
     public void i(String tag, String info) {
-        Log.println(Log.INFO, tag, info);
     }
 
     public void v(String tag, String info) {
-        Log.println(Log.VERBOSE, tag, info);
     }
 
     public void e(String tag, String info, Throwable throwable) {
-        Log.e(tag, info, throwable);
     }
 
     public void printJson(String tag, String json){
 
-
-        if(json!=null&&json.length()>3000) {
-
-            Log.println(Log.DEBUG, tag, json.substring(0, 3000));
-            printJson(tag,json.substring(3000,json.length()));
-        }else {
-            Log.println(Log.DEBUG, tag, json);
-        }
     }
 
 
     public void json(String tag, String json) {
-        if (!TextUtils.isEmpty(json)) {
-            String msg = "\n" + format(convertUnicode(json));
 
-            printJson(tag,msg);
-        } else {
-            e(tag, '╔' + DOUBLE_DIVIDER);
-            e(tag, "║");
-            e(tag, "║");
-            e(tag, "║");
-            e(tag, "║" + "          Empty/Null json content");
-            e(tag, "║");
-            e(tag, "║");
-            e(tag, "║");
-            e(tag, '╚' + DOUBLE_DIVIDER);
-        }
     }
 
 

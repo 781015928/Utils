@@ -1,10 +1,8 @@
-package com.czg.utils.aoc;
+package com.czg.utils;
 
 import android.content.Context;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
@@ -53,15 +51,8 @@ public class ToastUtils {
         if (sToast != null && sToast.get() != null) {
             sToast.get().cancel();
         }
-        sToast = new WeakReference(new Toast(context.getApplicationContext()));
-        LayoutInflater inflate = (LayoutInflater)
-                context.getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = inflate.inflate(com.android.internal.R.layout.transient_notification, null);
-        TextView tv = (TextView) v.findViewById(com.android.internal.R.id.message);
-        sToast.get().setView(v);
-        tv.setText(sequence);
-        sToast.get().setDuration(Toast.LENGTH_LONG);
-        sToast.get().setGravity(sGravity, sXOffset, sYOffset);
+        sToast = new WeakReference(Toast.makeText(context.getApplicationContext(), sequence, Toast.LENGTH_LONG));
+
         sToast.get().show();
     }
 
@@ -69,15 +60,8 @@ public class ToastUtils {
         if (sToast != null && sToast.get() != null) {
             sToast.get().cancel();
         }
-        sToast = new WeakReference(new Toast(context.getApplicationContext()));
-        LayoutInflater inflate = (LayoutInflater)
-                context.getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = inflate.inflate(com.android.internal.R.layout.transient_notification, null);
-        TextView tv = (TextView) v.findViewById(com.android.internal.R.id.message);
-        sToast.get().setView(v);
-        tv.setText(sequence);
-        sToast.get().setDuration(Toast.LENGTH_SHORT);
-        sToast.get().setGravity(sGravity, sXOffset, sYOffset);
+        sToast = new WeakReference(Toast.makeText(context.getApplicationContext(), sequence, Toast.LENGTH_SHORT));
+
         sToast.get().show();
     }
 }

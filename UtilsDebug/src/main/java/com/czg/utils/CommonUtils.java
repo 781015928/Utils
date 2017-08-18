@@ -115,7 +115,7 @@ public class CommonUtils {
 	/**
 	 * 获取当前应用版本名称
 	 * 
-	 * @param
+	 * @param context
 	 * @return
 	 */
 	public static String getCurrentVersionName(Context context) {
@@ -218,12 +218,7 @@ public class CommonUtils {
 		return "";
 	}
 
-	/**
-	 * 判断时间是否超时
-	 * 
-	 * @param
-	 * @return
-	 */
+
 //	public static boolean isTimeOut(long lastUpdate, String flag) {
 //		if (lastUpdate == 0) {
 //			return true;
