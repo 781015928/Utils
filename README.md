@@ -1,5 +1,14 @@
 # Utils
-###DebugLog
+### DebugLog
+
+### debug
+
+debugCompile 'com.czg.utils:UtilsDebug:1.0.0' 
+### release
+ release版本部关闭所有功能
+
+releaseCompile  'com.czg.utils:UtilsRelease:1.0.0' 
+
 
 在方法上加上@DebugLog 
 ![Image text](https://github.com/781015928/Utils/blob/master/snapshot/SNAPSHOT_1.png)
