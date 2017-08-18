@@ -1,9 +1,27 @@
 # Utils
 ### DebugLog
 
-### debug
+##### classpath
+```
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:1.0.8'
+       
+    }
+}
+```
+##### apply plugin
+````
 
+
+
+### debug
 debugCompile 'com.czg.utils:UtilsDebug:1.0.0' 
+
 ### release
  release版本部关闭所有功能
 
