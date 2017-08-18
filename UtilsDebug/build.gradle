@@ -1,11 +1,11 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'android-aspectjx'
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOL_VERSION
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 26
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
 
     }
 
@@ -13,5 +13,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    //-----------------Aop-----------------
+    compile 'org.aspectj:aspectjrt:1.8.9'
+    //-----------------Aop-----------------
+    compile 'com.android.support:support-annotations:'+BUILD_TOOL_VERSION;
 }
