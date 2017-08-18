@@ -21,12 +21,12 @@ apply plugin: 'android-aspectjx'
 
 
 ### debug
-debugCompile 'com.czg.utils:UtilsDebug:1.0.0' 
+debugCompile 'com.czg.utils:UtilsDebug:1.0.1' 
 
 ### release
  release版本部关闭所有功能
 
-releaseCompile  'com.czg.utils:UtilsRelease:1.0.0' 
+releaseCompile  'com.czg.utils:UtilsRelease:1.0.1' 
 
 
 在方法上加上@DebugLog 

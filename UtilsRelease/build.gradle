@@ -18,7 +18,7 @@ publish {
     userOrg = 'c781015928'      //bintray注册的用户名
     groupId = 'com.czg.utils'         //compile引用时的第1部分groupId
     artifactId = 'UtilsRelease'     //compile引用时的第2部分项目名
-    publishVersion = '1.0.0'    //compile引用时的第3部分版本号
+    publishVersion = '1.0.1'    //compile引用时的第3部分版本号
     desc = 'This is a aoc logutils and utils'
     website = 'https://github.com/781015928/Utils'
 }

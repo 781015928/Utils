@@ -19,8 +19,8 @@ public class DebugAspect {
     private static final String BOTTOM_CORNER = "┗";
     private static final String LEFTLINE = "┃";
     private static final String TAB = "     ";
-
-    @Pointcut("execution(@international_base.international_base.aop.logger.DebugLog  * *(..))")
+    private static final String POINTCUTVALUE="execution(@com.czg.utils.aoc.DebugLog  * *(..))";
+    @Pointcut(POINTCUTVALUE)
     public void debugPoint() {
 
     }
