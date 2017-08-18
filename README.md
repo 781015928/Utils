@@ -15,7 +15,7 @@ buildscript {
 }
 ```
 ##### apply plugin
-````
+
 
 
 
