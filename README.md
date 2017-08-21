@@ -21,12 +21,12 @@ apply plugin: 'android-aspectjx'
 
 
 ### debug
-debugCompile 'com.czg.utils:UtilsDebug:1.0.1' 
+debugCompile 'com.czg.utils:UtilsDebug:1.0.4' 
 
 ### release
  release版本部关闭所有功能
 
-releaseCompile  'com.czg.utils:UtilsRelease:1.0.1' 
+releaseCompile  'com.czg.utils:UtilsRelease:1.0.4' 
 
 
 在方法上加上@DebugLog 
@@ -52,4 +52,25 @@ releaseCompile  'com.czg.utils:UtilsRelease:1.0.1'
  
 ## LifeCycleLog 自动生成生命周期i级别 log
 ![Image text](https://github.com/781015928/Utils/blob/master/snapshot/SNAPSHOT_3.png)
- 
+```
+    @Permission({Manifest.permission.READ_CONTACTS})
+     private void needContacts() {
+         Toast.makeText(MainActivity.this, "通讯录权限获取成功", Toast.LENGTH_SHORT).show();
+     }
+```
+![Image text](https://github.com/781015928/Utils/blob/master/snapshot/SNAPSHOT_4.png)
+![Image text](https://github.com/781015928/Utils/blob/master/snapshot/SNAPSHOT_5.png)
+
+```
+    @Permission({Manifest.permission.READ_CALL_LOG
+            , Manifest.permission.READ_PHONE_STATE
+            , Manifest.permission.CALL_PHONE
+            , Manifest.permission.CAMERA
+            , Manifest.permission.USE_SIP
+            , Manifest.permission.SEND_SMS})
+    private void needMore() {
+        Toast.makeText(MainActivity.this, "多个权限获取成功", Toast.LENGTH_SHORT).show();
+    }
+```
+![Image text](https://github.com/781015928/Utils/blob/master/snapshot/SNAPSHOT_6.png)
+![Image text](https://github.com/781015928/Utils/blob/master/snapshot/SNAPSHOT_7.png)

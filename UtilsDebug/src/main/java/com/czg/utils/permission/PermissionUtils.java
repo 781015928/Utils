@@ -42,7 +42,7 @@ class PermissionUtils {
     public String[] filterPermissions(String[] permissions) {
         ArrayList<String> permissionArray = new ArrayList<>();
         for (String permission : permissions) {
-            if (ContextCompat.checkSelfPermission(AopUtils.getActiveActivity(), permissions[0]) != PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(AopUtils.getActiveActivity(), permission) != PackageManager.PERMISSION_GRANTED) {
                 permissionArray.add(permission);
             }
         }

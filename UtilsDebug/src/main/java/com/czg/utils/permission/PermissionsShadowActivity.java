@@ -49,6 +49,7 @@ public class PermissionsShadowActivity extends AppCompatActivity {
                 this.permissions = permissions = PermissionUtils.mPermissionUtils.filterPermissions(permissions);
                 if (permissions.length == 0) {
                     success();
+
                 } else {
                     boolean grantResultBool = false;
                     for (int grantResult : grantResults) {
@@ -68,7 +69,6 @@ public class PermissionsShadowActivity extends AppCompatActivity {
 
                     } else {
                         success();
-                        finish();
 
                     }
                 }
@@ -92,6 +92,7 @@ public class PermissionsShadowActivity extends AppCompatActivity {
             PermissionUtils.mPermissionUtils.callBack.onSuccess();//Access to success
             Toast.makeText(this, R.string.permission_to_success, Toast.LENGTH_SHORT).show();
         }
+        finish();
     }
 
     /**
@@ -126,7 +127,6 @@ public class PermissionsShadowActivity extends AppCompatActivity {
                         dialog.dismiss();
                     }
                     success();
-                    finish();
                 }
             }
         }
