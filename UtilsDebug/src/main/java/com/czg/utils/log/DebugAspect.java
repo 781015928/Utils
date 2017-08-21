@@ -1,4 +1,4 @@
-package com.czg.utils.aoc;
+package com.czg.utils.log;
 
 import android.util.Log;
 
@@ -19,7 +19,7 @@ public class DebugAspect {
     private static final String BOTTOM_CORNER = "┗";
     private static final String LEFTLINE = "┃";
     private static final String TAB = "     ";
-    private static final String POINTCUTVALUE="execution(@com.czg.utils.aoc.DebugLog  * *(..))";
+    private static final String POINTCUTVALUE="execution(@com.czg.utils.log.DebugLog  * *(..))";
     @Pointcut(POINTCUTVALUE)
     public void debugPoint() {
 

@@ -1,4 +1,5 @@
-package com.czg.utils.aoc;
+package com.czg.utils.log;
+
 
 import android.support.annotation.IntDef;
 
@@ -12,7 +13,7 @@ import java.lang.annotation.Target;
  */
 
 @Target(ElementType.METHOD)
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.CLASS)
 public @interface DebugLog {
     int ERROR = 4;
     int DEBUG = 3;
